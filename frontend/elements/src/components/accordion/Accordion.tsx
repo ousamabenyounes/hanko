@@ -5,6 +5,15 @@ type Selector<T> = (item: T, itemIndex?: number) => string | h.JSX.Element;
 import cx from "classnames";
 import styles from "./styles.sass";
 
+const ACCORDION_PARTS = {
+  accordion: "accordion",
+  item: "accordion-item",
+  input: "accordion-input",
+  label: "accordion-label",
+  labelText: "accordion-label-text",
+  content: "accordion-content",
+} as const;
+
 interface Props<T> {
   name: string;
   columnSelector: Selector<T>;
@@ -42,10 +51,15 @@ const Accordion = function <T>({
   };
 
   return (
-    <div className={styles.accordion}>
+    <div part={ACCORDION_PARTS.accordion} className={styles.accordion}>
       {data.map((item, itemIndex) => (
-        <div className={styles.accordionItem} key={itemIndex}>
+        <div
+          part={ACCORDION_PARTS.item}
+          className={styles.accordionItem}
+          key={itemIndex}
+        >
           <input
+            part={ACCORDION_PARTS.input}
             type={"radio"}
             className={styles.accordionInput}
             id={`${name}-${itemIndex}`}
@@ -55,14 +69,16 @@ const Accordion = function <T>({
             checked={checked(itemIndex)}
           />
           <label
+            part={ACCORDION_PARTS.label}
             className={cx(styles.label, dropdown && styles.dropdown)}
             for={`${name}-${itemIndex}`}
           >
-            <span className={styles.labelText}>
+            <span part={ACCORDION_PARTS.labelText} className={styles.labelText}>
               {columnSelector(item, itemIndex)}
             </span>
           </label>
           <div
+            part={ACCORDION_PARTS.content}
             className={cx(
               styles.accordionContent,
               dropdown && styles.dropdownContent,

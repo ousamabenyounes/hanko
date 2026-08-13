@@ -372,6 +372,12 @@ The following parts are available:
 - `divider-text` - the divider text
 - `divider-line` - the line before and after the `divider-text`
 - `form-item` - the container of a form item, e.g. an input field or a button
+- `accordion` - the accordion container
+- `accordion-item` - an accordion item
+- `accordion-input` - the input controlling an accordion item
+- `accordion-label` - the label for an accordion item
+- `accordion-label-text` - the text container inside an accordion label
+- `accordion-content` - the content of an accordion item
 
 #### Using shadow parts
 
