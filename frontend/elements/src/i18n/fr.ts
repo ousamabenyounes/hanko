@@ -110,6 +110,8 @@ export const fr: Translation = {
     skip: "Passer",
     save: "Enregistrer",
     password: "Mot de passe",
+    showPassword: "Afficher le mot de passe",
+    hidePassword: "Masquer le mot de passe",
     passkey: "Clé d'identification",
     passcode: "Code d'accès",
     signInPassword: "Se connecter avec un mot de passe",

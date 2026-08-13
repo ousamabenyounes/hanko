@@ -98,6 +98,8 @@ export interface Translation {
     skip: string;
     save: string;
     password: string;
+    showPassword: string;
+    hidePassword: string;
     passkey: string;
     passcode: string;
     signInPassword: string;

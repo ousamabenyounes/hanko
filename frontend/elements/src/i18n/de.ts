@@ -112,6 +112,8 @@ export const de: Translation = {
     skip: "Überspringen",
     save: "Speichern",
     password: "Passwort",
+    showPassword: "Passwort anzeigen",
+    hidePassword: "Passwort ausblenden",
     passkey: "Passkey",
     passcode: "Passcode",
     signInPassword: "Mit einem Passwort anmelden",

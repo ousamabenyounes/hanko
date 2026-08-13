@@ -107,6 +107,8 @@ export const en: Translation = {
     skip: "Skip",
     save: "Save",
     password: "Password",
+    showPassword: "Show password",
+    hidePassword: "Hide password",
     passkey: "Passkey",
     passcode: "Passcode",
     signInPassword: "Sign in with a password",

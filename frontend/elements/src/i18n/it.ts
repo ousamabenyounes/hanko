@@ -108,6 +108,8 @@ export const it: Translation = {
     skip: "Salta",
     save: "Salva",
     password: "Password",
+    showPassword: "Mostra password",
+    hidePassword: "Nascondi password",
     passkey: "Chiave di accesso",
     passcode: "Codice di accesso",
     signInPassword: "Accedi con password",

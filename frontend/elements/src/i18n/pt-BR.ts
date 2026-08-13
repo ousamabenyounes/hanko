@@ -110,6 +110,8 @@ export const ptBR: Translation = {
     skip: "Pular",
     save: "Salvar",
     password: "Senha",
+    showPassword: "Mostrar senha",
+    hidePassword: "Ocultar senha",
     passkey: "Chave de acesso",
     passcode: "Código de acesso",
     signInPassword: "Entre com uma senha",

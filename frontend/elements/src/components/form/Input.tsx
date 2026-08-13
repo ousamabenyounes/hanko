@@ -1,9 +1,16 @@
 import { h, InputHTMLAttributes } from "preact";
-import { useContext, useEffect, useMemo, useRef } from "preact/compat";
+import {
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "preact/compat";
 import { TranslateContext } from "@denysvuika/preact-translate";
 import { Input as FlowInput } from "@teamhanko/hanko-frontend-sdk";
 import { AppContext } from "../../contexts/AppProvider";
 import cx from "classnames";
+import Eye from "../icons/Eye";
 
 import styles from "./styles.sass";
 
@@ -18,6 +25,8 @@ const Input = ({ label, ...props }: Props) => {
   const ref = useRef(null);
   const { uiState } = useContext(AppContext);
   const { t } = useContext(TranslateContext);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const isPassword = props.type === "password";
 
   const disabled = useMemo(
     () => uiState.isDisabled || props.disabled,
@@ -49,15 +58,32 @@ const Input = ({ label, ...props }: Props) => {
         minLength={props.flowInput?.min_length}
         hidden={props.flowInput?.hidden}
         {...props}
+        type={isPassword && passwordVisible ? "text" : props.type}
         ref={ref}
         aria-label={placeholder}
         placeholder={placeholder}
         className={cx(
           styles.input,
+          isPassword && styles.passwordInput,
           !!props.flowInput?.error && props.markError && styles.error,
         )}
         disabled={disabled}
       />
+      {isPassword ? (
+        <button
+          type="button"
+          part="password-toggle"
+          className={styles.passwordToggle}
+          aria-label={t(
+            passwordVisible ? "labels.hidePassword" : "labels.showPassword",
+          )}
+          aria-pressed={passwordVisible}
+          disabled={disabled}
+          onClick={() => setPasswordVisible((visible) => !visible)}
+        >
+          <Eye crossedOut={passwordVisible} />
+        </button>
+      ) : null}
     </div>
   );
 };

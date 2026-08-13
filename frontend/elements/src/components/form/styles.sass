@@ -165,6 +165,28 @@
     background: variables.$color-shade-2
     border-color: variables.$color-shade-1
 
+.passwordToggle
+  position: absolute
+  right: .5rem
+  top: 50%
+  transform: translateY(-50%)
+  display: flex
+  padding: 0
+  border: 0
+  color: variables.$color
+  background: transparent
+  cursor: pointer
+
+  &:disabled
+    color: variables.$color-shade-1
+    cursor: default
+
+  svg
+    fill: currentColor
+
+.passwordInput
+  padding-right: 2.5rem
+
 .passcodeInputWrapper
   flex-grow: 1
   min-width: variables.$input-min-width

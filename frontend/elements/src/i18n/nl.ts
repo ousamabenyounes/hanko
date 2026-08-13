@@ -107,6 +107,8 @@ export const nl: Translation = {
     skip: "Overslaan",
     save: "Opslaan",
     password: "Wachtwoord",
+    showPassword: "Wachtwoord tonen",
+    hidePassword: "Wachtwoord verbergen",
     passkey: "Passkey",
     passcode: "Toegangscode",
     signInPassword: "Inloggen met een wachtwoord",

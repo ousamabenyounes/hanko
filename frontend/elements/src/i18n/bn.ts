@@ -108,6 +108,8 @@ export const bn: Translation = {
     passkey: "পাসওয়ার্ড",
     passcode: "পাসকোড",
     password: "পাসওয়ার্ড",
+    showPassword: "পাসওয়ার্ড দেখান",
+    hidePassword: "পাসওয়ার্ড লুকান",
     signInPassword: "একটি পাসওয়ার্ড দিয়ে সাইন ইন",
     signInPasscode: "একটি পাসকোড দিয়ে সাইন ইন করুন",
     forgotYourPassword: "আপনি কি পাসওয়ার্ড ভুলে গেছেন?",

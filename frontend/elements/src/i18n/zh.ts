@@ -105,6 +105,8 @@ export const zh: Translation = {
     passkey: "密码",
     passcode: "访问码",
     password: "密码",
+    showPassword: "显示密码",
+    hidePassword: "隐藏密码",
     signInPassword: "使用密码登录",
     signInPasscode: "使用验证码登录",
     forgotYourPassword: "忘记密码了吗？",

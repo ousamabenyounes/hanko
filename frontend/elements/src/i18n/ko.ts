@@ -107,6 +107,8 @@ export const ko: Translation = {
     skip: "건너뛰기",
     save: "저장",
     password: "비밀번호",
+    showPassword: "비밀번호 표시",
+    hidePassword: "비밀번호 숨기기",
     passkey: "패스키",
     passcode: "패스코드",
     signInPassword: "비밀번호로 로그인",
