@@ -5,6 +5,8 @@ type Selector<T> = (item: T, itemIndex?: number) => string | h.JSX.Element;
 import cx from "classnames";
 import styles from "./styles.sass";
 
+const ENTER_KEY = "Enter";
+
 interface Props<T> {
   name: string;
   columnSelector: Selector<T>;
@@ -34,11 +36,26 @@ const Accordion = function <T>({
     [checkedItemID, toID],
   );
 
-  const clickHandler = (event: Event) => {
-    if (!(event.target instanceof HTMLInputElement)) return;
-    const itemIndex = parseInt(event.target.value, 10);
+  const toggleItem = (input: HTMLInputElement) => {
+    const itemIndex = parseInt(input.value, 10);
     const id = toID(itemIndex);
     setCheckedItemID(id === checkedItemID ? null : id);
+  };
+
+  const clickHandler = (event: Event) => {
+    if (!(event.target instanceof HTMLInputElement)) return;
+    toggleItem(event.target);
+  };
+
+  const keyDownHandler = (event: KeyboardEvent) => {
+    if (
+      event.key !== ENTER_KEY ||
+      !(event.target instanceof HTMLInputElement)
+    ) {
+      return;
+    }
+    event.preventDefault();
+    toggleItem(event.target);
   };
 
   return (
@@ -51,6 +68,7 @@ const Accordion = function <T>({
             id={`${name}-${itemIndex}`}
             name={name}
             onClick={clickHandler}
+            onKeyDown={keyDownHandler}
             value={itemIndex}
             checked={checked(itemIndex)}
           />

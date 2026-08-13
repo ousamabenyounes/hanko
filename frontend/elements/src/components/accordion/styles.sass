@@ -65,7 +65,11 @@
     .accordionInput
       position: absolute
       opacity: 0
-      z-index: -1
+
+      &:focus-visible
+        + .label
+          outline: variables.$border-width solid variables.$brand-color
+          outline-offset: variables.$border-width
 
       &:checked
         + .label
