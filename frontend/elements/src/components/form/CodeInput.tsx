@@ -12,6 +12,8 @@ import { AppContext } from "../../contexts/AppProvider";
 
 // Inspired by https://github.com/devfolioco/react-otp-input
 
+const ONE_TIME_CODE_AUTOCOMPLETE = "one-time-code";
+
 interface Props {
   passcodeDigits: string[];
   numberOfInputs?: number;
@@ -64,6 +66,7 @@ const Digit = ({ index, focus, digit = "", ...props }: DigitProps) => {
         aria-label={`${props.name}-digit-${index + 1}`}
         name={props.name + index.toString(10)}
         type={"text"}
+        autoComplete={ONE_TIME_CODE_AUTOCOMPLETE}
         inputMode={"numeric"}
         maxLength={1}
         ref={ref}
