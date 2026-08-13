@@ -1,8 +1,10 @@
-import { AutoSteps } from "./types/flow";
+import { AnyState, AutoSteps } from "./types/flow";
 import { WebauthnSupport } from "../WebauthnSupport";
 import WebauthnManager from "./WebauthnManager";
 import { CredentialCreationOptionsJSON } from "@github/webauthn-json";
 import { clearStoredCodeVerifier, getStoredCodeVerifier } from "../Pkce";
+
+let pendingTokenExchange: Promise<AnyState> | undefined;
 
 // Helper function to handle WebAuthn credential creation and error handling
 // eslint-disable-next-line require-jsdoc
@@ -92,15 +94,21 @@ export const autoSteps: AutoSteps = {
     if (token?.length > 0) {
       updateUrl(["hanko_token"]);
       const verifier = getStoredCodeVerifier();
+      pendingTokenExchange = state.actions.exchange_token.run({
+        token,
+        code_verifier: verifier || undefined,
+      });
 
       try {
-        return await state.actions.exchange_token.run({
-          token,
-          code_verifier: verifier || undefined,
-        });
+        return await pendingTokenExchange;
       } finally {
+        pendingTokenExchange = undefined;
         clearStoredCodeVerifier();
       }
+    }
+
+    if (pendingTokenExchange) {
+      return await pendingTokenExchange;
     }
 
     if (error?.length > 0) {
