@@ -2,6 +2,7 @@
   "name": "@teamhanko/hanko-elements",
   "version": "3.0.0",
   "type": "module",
+  "module": "dist/elements.js",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -102,6 +103,7 @@
   "scripts": {
     "lint": "eslint 'src/**/*.ts?(x)'",
     "format": "pretty-quick --staged",
+    "test": "node --test tests/*.test.mjs",
     "build": "npx webpack --mode=production",
     "build:dev": "npx webpack --mode=development --config webpack.config.dev.cjs"
   },
