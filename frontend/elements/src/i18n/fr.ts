@@ -8,7 +8,7 @@ export const fr: Translation = {
     loginFinished: "Connexion réussie",
     loginPasscode: "Entrez le code d'accès",
     loginPassword: "Entrez le mot de passe",
-    registerAuthenticator: "Créer une clé d'identification",
+    registerAuthenticator: "Créer une clé d'accès sur cet appareil",
     registerConfirm: "Créer un compte ?",
     registerPassword: "Définir un nouveau mot de passe",
     otpSetUp: "Configurer l'application d'authentification",
@@ -56,7 +56,7 @@ export const fr: Translation = {
     enterPasscodeNoEmail:
       "Entrez le code envoyé à votre adresse e-mail principale.",
     setupPasskey:
-      "Connectez-vous à votre compte facilement et en toute sécurité avec une clé d'identification. Remarque : Vos données biométriques sont uniquement stockées sur vos appareils et ne seront jamais partagées avec qui que ce soit.",
+      "Connectez-vous plus vite la prochaine fois en créant une clé d'accès sur cet appareil. Vous pourrez utiliser votre empreinte digitale, votre visage ou le verrouillage de l'écran pour confirmer votre identité. Ne créez pas de clé d'accès s'il s'agit d'un appareil partagé.",
     createAccount:
       'Aucun compte n\'existe pour "{emailAddress}". Voulez-vous créer un nouveau compte ?',
     otpEnterVerificationCode:

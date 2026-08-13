@@ -8,7 +8,7 @@ export const de: Translation = {
     loginFinished: "Login erfolgreich",
     loginPasscode: "Passcode eingeben",
     loginPassword: "Passwort eingeben",
-    registerAuthenticator: "Erstellen Sie einen Passkey",
+    registerAuthenticator: "Passkey auf diesem Gerät erstellen",
     registerConfirm: "Konto erstellen?",
     registerPassword: "Neues Passwort eingeben",
     otpSetUp: "Authenticator-App einrichten",
@@ -56,7 +56,7 @@ export const de: Translation = {
     enterPasscodeNoEmail:
       "Geben Sie den Passcode ein, der an Ihre primäre E-Mail-Adresse gesendet wurde.",
     setupPasskey:
-      "Ihr Gerät unterstützt die sichere Anmeldung mit Passkeys. Hinweis: Ihre biometrischen Daten verbleiben sicher auf Ihrem Gerät und werden niemals an unseren Server gesendet.",
+      "Wenn Sie einen neuen Passkey auf diesem Gerät erstellen, können Sie sich schneller anmelden und Ihre Identität einfach mit Ihrem Fingerabdruck oder Gesicht oder über die Displaysperre bestätigen. Bitte erstellen Sie keinen neuen Passkey, falls es sich um ein gemeinsam verwendetes Gerät handelt.",
     createAccount:
       'Es existiert kein Konto für "{emailAddress}". Möchten Sie ein neues Konto erstellen?',
     otpEnterVerificationCode:

@@ -8,7 +8,7 @@ export const en: Translation = {
     loginFinished: "Login successful",
     loginPasscode: "Enter passcode",
     loginPassword: "Enter password",
-    registerAuthenticator: "Create a passkey",
+    registerAuthenticator: "Create a passkey on this device",
     registerConfirm: "Create account?",
     registerPassword: "Set new password",
     otpSetUp: "Set up authenticator app",
@@ -55,7 +55,7 @@ export const en: Translation = {
     enterPasscodeNoEmail:
       "Enter the passcode that was sent to your primary email address.",
     setupPasskey:
-      "Sign in to your account easily and securely with a passkey. Note: Your biometric data is only stored on your devices and will never be shared with anyone.",
+      "Speed up your sign in next time by creating a new passkey on this device. You’ll be able to use just your fingerprint, face, or screen lock to verify it’s you. Don’t create a new passkey if this is a shared device.",
     createAccount:
       'No account exists for "{emailAddress}". Do you want to create a new account?',
     otpEnterVerificationCode:

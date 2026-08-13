@@ -8,7 +8,7 @@ export const ptBR: Translation = {
     loginFinished: "Login efetuado com sucesso",
     loginPasscode: "Digite o código de acesso",
     loginPassword: "Digite a senha",
-    registerAuthenticator: "Criar uma chave de acesso",
+    registerAuthenticator: "Crie uma chave de acesso neste dispositivo",
     registerConfirm: "Concluir cadastro?",
     registerPassword: "Redefina sua senha",
     otpSetUp: "Configurar o aplicativo de autenticação",
@@ -57,7 +57,7 @@ export const ptBR: Translation = {
     enterPasscodeNoEmail:
       "Digite o código enviado para o seu endereço de e-mail principal.",
     setupPasskey:
-      "Entre na sua conta de forma fácil e segura com uma chave de acesso. Nota: Os seus dados biométricos são apenas guardados no seu aparelho e nunca serão compartilhados com ninguém.",
+      "Agilize seu próximo login criando uma nova chave de acesso neste dispositivo. Será possível usar apenas sua impressão digital, seu rosto ou o bloqueio de tela para confirmar sua identidade. Não crie uma chave de acesso se este for um dispositivo compartilhado.",
     createAccount:
       'Nenhuma conta encontrada para o e-mail "{emailAddress}". Deseja criar uma nova conta?',
     otpEnterVerificationCode:
