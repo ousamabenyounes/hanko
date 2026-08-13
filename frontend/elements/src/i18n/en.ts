@@ -103,6 +103,7 @@ export const en: Translation = {
     yes: "yes",
     email: "Email",
     continue: "Continue",
+    restart: "Restart",
     copied: "copied",
     skip: "Skip",
     save: "Save",

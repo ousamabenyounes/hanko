@@ -103,6 +103,7 @@ export const ko: Translation = {
     yes: "예",
     email: "이메일",
     continue: "계속",
+    restart: "다시 시작",
     copied: "복사됨",
     skip: "건너뛰기",
     save: "저장",

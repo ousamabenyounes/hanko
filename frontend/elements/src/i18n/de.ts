@@ -108,6 +108,7 @@ export const de: Translation = {
     yes: "ja",
     email: "E-Mail",
     continue: "Weiter",
+    restart: "Neu starten",
     copied: "kopiert",
     skip: "Überspringen",
     save: "Speichern",

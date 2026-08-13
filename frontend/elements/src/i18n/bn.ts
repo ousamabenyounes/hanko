@@ -102,6 +102,7 @@ export const bn: Translation = {
     yes: "হ্যাঁ",
     email: "ইমেইল",
     continue: "চালিয়ে যান",
+    restart: "পুনরায় শুরু করুন",
     copied: "নকল করা হয়েছে",
     skip: "এড়িয়ে যান",
     save: "সংরক্ষণ",

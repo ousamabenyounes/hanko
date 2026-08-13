@@ -106,6 +106,7 @@ export const ptBR: Translation = {
     yes: "sim",
     email: "E-mail",
     continue: "Continuar",
+    restart: "Reiniciar",
     copied: "copiado",
     skip: "Pular",
     save: "Salvar",

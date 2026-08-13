@@ -31,6 +31,8 @@ interface Props {
 
 type IdentifierTypes = "username" | "email" | "identifier";
 
+const LOGIN_COMPONENT = "login";
+
 const LoginInitPage = (props: Props) => {
   const { t } = useContext(TranslateContext);
   const {
@@ -55,6 +57,14 @@ const LoginInitPage = (props: Props) => {
     string | null
   >(null);
   const [rememberMe, setRememberMe] = useState<boolean>(false);
+  const canRunFlowAction = Object.values(flowState.actions).some(
+    (action) => action.enabled,
+  );
+
+  const onRestartClick = (event: Event) => {
+    event.preventDefault();
+    init(LOGIN_COMPONENT);
+  };
 
   const onIdentifierInput = (event: Event) => {
     event.preventDefault();
@@ -163,6 +173,9 @@ const LoginInitPage = (props: Props) => {
       <Content>
         <Headline1>{t("headlines.signIn")}</Headline1>
         <ErrorBox state={flowState} error={thirdPartyError} />
+        {flowState.error && !canRunFlowAction ? (
+          <Button onClick={onRestartClick}>{t("labels.restart")}</Button>
+        ) : null}
         {inputs ? (
           <>
             <Form

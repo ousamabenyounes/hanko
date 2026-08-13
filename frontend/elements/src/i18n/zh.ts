@@ -99,6 +99,7 @@ export const zh: Translation = {
     yes: "是",
     email: "电子邮件",
     continue: "继续",
+    restart: "重新开始",
     copied: "已复制",
     skip: "跳过",
     save: "保存",

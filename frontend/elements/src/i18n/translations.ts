@@ -93,6 +93,7 @@ export interface Translation {
     yes: string;
     email: string;
     continue: string;
+    restart: string;
     copied: string;
     configured: string;
     skip: string;

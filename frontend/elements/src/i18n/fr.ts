@@ -106,6 +106,7 @@ export const fr: Translation = {
     yes: "oui",
     email: "E-mail",
     continue: "Continuer",
+    restart: "Redémarrer",
     copied: "copié",
     skip: "Passer",
     save: "Enregistrer",

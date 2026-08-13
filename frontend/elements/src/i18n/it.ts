@@ -104,6 +104,7 @@ export const it: Translation = {
     yes: "si",
     email: "Email",
     continue: "Continua",
+    restart: "Ricomincia",
     copied: "copiato",
     skip: "Salta",
     save: "Salva",

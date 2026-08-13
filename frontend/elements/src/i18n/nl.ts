@@ -103,6 +103,7 @@ export const nl: Translation = {
     yes: "ja",
     email: "E-mail",
     continue: "Doorgaan",
+    restart: "Opnieuw beginnen",
     copied: "gekopieerd",
     skip: "Overslaan",
     save: "Opslaan",

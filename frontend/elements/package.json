@@ -100,6 +100,7 @@
     }
   },
   "scripts": {
+    "test": "jest",
     "lint": "eslint 'src/**/*.ts?(x)'",
     "format": "pretty-quick --staged",
     "build": "npx webpack --mode=production",
